@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Font Weights */
 .poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; }
 .poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; font-style: normal; }
 .poppins-light { font-family: "Poppins", sans-serif; font-weight: 300; font-style: normal; }
@@ -9,7 +8,6 @@
 .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
 .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
 
-/* Navbar */
 .navbar {
   width: 50%;
   margin: 1.9% 0 1.9% 25%;
@@ -34,16 +32,21 @@
 
 .navbar-brand {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1rem; 
   letter-spacing: 1px;
+  padding: 0.1rem 0.3rem;
 }
 
-/* Section Backgrounds */
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+  display: inline-block;
+}
+
 .section-bg-light { height: 100vh; background: #f8f9fa; }
 .section-bg-gray { height: 100vh; background: #e9ecef; }
 .section-bg-dark { height: 100vh; background: #dee2e6; }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -54,7 +57,6 @@
 
 #menu-toggle { display: none; }
 
-/* Nav Links */
 .nav-links {
   display: flex;
   justify-content: center;
@@ -65,7 +67,7 @@
   .nav-links {
     display: none !important;
     flex-direction: column;
-    background: linear-gradient(90deg, #02409e, #5f355b);
+    background: linear-gradient(90deg, #d2d2d2, #5f355b);
     position: absolute;
     top: 60px;
     left: 0;
@@ -88,8 +90,10 @@
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #063360 0%, #2d7fe4 100%);
+  background-color: #fff;
   padding: 60px 0;
+  border-top-right-radius:32px ;
+  border-top-left-radius: 32px;
 }
 
 .hero h1 {
@@ -111,20 +115,12 @@
   transition: all 0.3s ease;
 }
 
+  .hero { text-align: center; }
 .hero .btn:hover {
   background: #0b5ed7;
   transform: translateY(-3px);
-  box-shadow: 0px 6px 18px rgba(13, 110, 253, 0.3);
 }
 
-@media (max-width: 992px) {
-  .hero { text-align: center; }
-  .hero .hero-img { margin-top: 30px; }
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1rem; }
-}
-
-/* Scrolling Banners */
 .scrolling-banner, .scrolling-banner-2 {
   background-color: #FFD700;
   color: #000000;
@@ -149,13 +145,12 @@
   animation: scroll-right 20s linear infinite;
 }
 
-/* Upper Banner */
 .upper-banner {
+  background-color: #FFD700;
   width: 100%;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
-  background-image: url('asset/src/img/natrue.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -211,7 +206,7 @@
 
 /* Tombol Kustom */
 .btn-about {
-  background: #0d6efd;
+  background: #03476e;
   color: #fff;
   padding: 12px 30px;
   font-size: 1rem;
@@ -230,7 +225,8 @@
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0d6efd;
+    padding: 10% 0;
+    color: #1791fb;
 }
 
 .team-card {
@@ -256,4 +252,40 @@
     font-size: 1.5rem;
     font-weight: 600;
     
+}
+
+.card {
+  max-width: 320px;
+  min-width: 220px;
+  margin: 1rem auto;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background-color: rgba(156, 156, 160, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(0px) saturate(200%);
+  -webkit-backdrop-filter: blur(0px) saturate(200%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
