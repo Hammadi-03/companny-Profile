@@ -296,3 +296,46 @@
   color: #333;
   margin-bottom: 0.5rem;
 }
+/* Section Contact */
+#contact {
+  background-color: #f8f9fa;
+}
+
+#contact h2 {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+#contact p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+/* Contact Info Icons */
+#contact i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Button Styling */
+.btn-contact {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #contact .col-md-4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
