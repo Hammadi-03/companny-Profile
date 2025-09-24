@@ -50,13 +50,19 @@
   display: inline-block;
 }
 
+#hero {
+  border-radius: 20px !important;
+  overflow: hidden;
+  width: 99vw;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5rem;
+}
+
 .section-bg-light { height: 100vh; background: #f8f9fa; }
 .section-bg-gray { height: 100vh; background: #e9ecef; }
 .section-bg-dark { height: 100vh; background: #dee2e6; }
 
 .hamburger {
-  display: none;
-  font-size: 2rem;
   color: white;
   cursor: pointer;
   margin-left: 10px;
@@ -116,13 +122,13 @@
 }
 
 .hero .btn {
-  border-radius: 50px;
+  border-radius: 20px;
   padding: 12px 30px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
-  .hero { text-align: center; }
+  .hero { text-align: start; }
 .hero .btn:hover {
   background: #0b5ed7;
   transform: translateY(-3px);
@@ -309,7 +315,6 @@
   color: #333;
   margin-bottom: 0.5rem;
 }
-/* Section Contact */
 #contact {
   background-color: #f8f9fa;
 }
@@ -324,13 +329,11 @@
   color: #6c757d;
 }
 
-/* Contact Info Icons */
 #contact i {
   margin-right: 10px;
   font-size: 18px;
 }
 
-/* Button Styling */
 .btn-contact {
   background-color: #800000;
   color: white;
@@ -345,14 +348,12 @@
   transform: translateY(-3px);
 }
 
-/* Responsive Google Maps */
 #contact iframe {
   width: 100%;
   height: 250px;
   border-radius: 12px;
 }
 
-/* Fade-in animation for form */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -361,7 +362,6 @@
   animation: fadeIn 1s ease;
 }
 
-/* Hero text animation */
 @keyframes fadeInSlide {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
