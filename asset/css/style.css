@@ -240,11 +240,14 @@
     border: none;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff8f5;
+    border: 2px solid #800000;
+    box-shadow: 0 8px 24px rgba(128,0,0,0.08);
 }
 
 .team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(128,0,0,0.18);
 }
 
 .team-img {
@@ -253,6 +256,16 @@
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+  transition: transform 0.4s, filter 0.4s;
+  filter: grayscale(100%);
+}
+
+.team-photo:hover {
+  transform: scale(1.08);
+  filter: grayscale(0%);
 }
 
 .h2 {
@@ -319,7 +332,7 @@
 
 /* Button Styling */
 .btn-contact {
-  background-color: #007bff;
+  background-color: #800000;
   color: white;
   padding: 10px 25px;
   border-radius: 30px;
@@ -328,8 +341,36 @@
 }
 
 .btn-contact:hover {
-  background-color: #0056b3;
+  background-color: #a83232;
   transform: translateY(-3px);
+}
+
+/* Responsive Google Maps */
+#contact iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+}
+
+/* Fade-in animation for form */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+/* Hero text animation */
+@keyframes fadeInSlide {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-title, .hero-desc {
+  animation: fadeInSlide 1.2s ease;
+}
+.text-maroon {
+  color: #800000;
 }
 
 /* Responsiveness */
