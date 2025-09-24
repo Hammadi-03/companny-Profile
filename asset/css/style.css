@@ -51,7 +51,8 @@
 }
 
 #hero {
-  border-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius:20px !important;
   overflow: hidden;
   width: 99vw;
   background-color: rgb(255, 255, 255);
