@@ -16,23 +16,17 @@
 .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
 
 .navbar {
-  width: 50%;
-  margin: 1.9% 0 1.9% 25%;
   display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-  background: rgba(103, 105, 111, 0.08);
-  border-radius: 32px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.9px);
-  -webkit-backdrop-filter: blur(8.1px);
-  border: 1px solid rgba(103, 105, 111, 0.2);
-  padding: 0.8rem 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  height: 4rem;
+  border-bottom-left-radius:15px ;
+  border-bottom-right-radius:15px ;
   font-family: "Poppins", sans-serif;
 }
 
 .navbar a {
-  color: #fff !important;
+  color: #020202 !important;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -51,13 +45,13 @@
 }
 
 #hero {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius:20px !important;
+  border-top-left-radius: 32px !important;
+  border-top-right-radius:32px !important;
   overflow: hidden;
   width: 99vw;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 5rem;
-  top: -66px;
+  margin-top: -0;
+  overflow-wrap: inherit
 }
 
 
@@ -66,7 +60,7 @@
 .section-bg-dark { height: 100vh; background: #dee2e6; }
 
 .hamburger {
-  color: white;
+  color: rgb(82, 80, 80);
   cursor: pointer;
   margin-left: 10px;
 }
@@ -99,7 +93,7 @@
 
 .nav-links .nav-link:hover {
   text-decoration: none;
-  border-bottom: 2px solid rgba(255, 166, 0, 0.867);
+  border-bottom: 2px solid rgba(119, 22, 22, 0.867);
   transition: 0.2s initial;
 }
 
