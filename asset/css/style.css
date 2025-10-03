@@ -15,6 +15,15 @@
 .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
 .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(asset\src\img\plane-air.jpg);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -61,9 +70,9 @@
 .section-bg-dark { height: 100vh; background: #dee2e6; }
 
 .hamburger {
-  color: rgb(82, 80, 80);
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 90%;
 }
 
 #menu-toggle { display: none; }
