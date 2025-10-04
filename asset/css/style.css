@@ -1,25 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@media (max-width: 768px) {
-  .nav-links.show-mobile {
-    display: flex !important;
-    flex-direction: column;
-    background: linear-gradient(90deg, #d2d2d2, #fefefe);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
-  }
-}
-.maroon-text {
-  color: #800000;
-}
 
-.maroon-bg {
-  background-color: #800000;
-}
+/* =========================
+   IMPORTS & FONTS
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200,1,300,1,400,1,500,1,600,1,700,1,800,1,900&display=swap');
+
+/* =========================
+   UTILITY CLASSES
+   ========================= */
+.maroon-text { color: #800000; }
+.maroon-bg { background-color: #800000; }
+.text-maroon { color: #800000; }
 .poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; }
 .poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; font-style: normal; }
 .poppins-light { font-family: "Poppins", sans-serif; font-weight: 300; font-style: normal; }
@@ -28,6 +18,9 @@
 .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
 .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
 
+/* =========================
+   BASE STYLES
+   ========================= */
 body {
   margin: 0;
   padding: 0;
@@ -35,6 +28,7 @@ body {
   background-image: url(asset\src\img\plane-air.jpg);
   color: #333;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -67,14 +61,20 @@ body {
   display: inline-block;
 }
 
+
+/* =========================
+   ABOUT US HERO SECTION (Top Border Radius Only)
+   ========================= */
 #hero {
   border-top-left-radius: 32px !important;
-  border-top-right-radius:32px !important;
+  border-top-right-radius: 32px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   overflow: hidden;
   width: 99vw;
   background-color: rgb(255, 255, 255);
-  margin-top: -0;
-  overflow-wrap: inherit
+  margin-top: 0;
+  overflow-wrap: inherit;
 }
 
 
@@ -104,36 +104,54 @@ body {
   color: white;
 }
 
-#menu-toggle { display: none; }
 
-.nav-links {
+/* Hide menu on mobile */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 999;
+}
+
+/* Show when active */
+.nav-menu.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* Show hamburger only on mobile */
+.hamburger-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.hamburger-toggle span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Mobile breakpoint */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none !important;
-    flex-direction: column;
-    background: linear-gradient(90deg, #d2d2d2, #5f355b);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
+  .hamburger-toggle {
+    display: flex;
   }
-}
-
-#menu-toggle:checked + .hamburger + .nav-links { display: flex !important; }
-
-.hamburger { display: block; }
-
-.nav-links .nav-link:hover {
-  text-decoration: none;
-  border-bottom: 2px solid rgba(119, 22, 22, 0.867);
-  transition: 0.2s initial;
+  .nav-menu {
+    display: none;
+  }
 }
 
 /* Hero Section */
