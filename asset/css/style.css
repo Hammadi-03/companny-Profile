@@ -1,12 +1,5 @@
 
-/* =========================
-   IMPORTS & FONTS
-   ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200,1,300,1,400,1,500,1,600,1,700,1,800,1,900&display=swap');
-
-/* =========================
-   UTILITY CLASSES
-   ========================= */
 .maroon-text { color: #800000; }
 .maroon-bg { background-color: #800000; }
 .text-maroon { color: #800000; }
@@ -18,28 +11,37 @@
 .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
 .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
 
+@font-face {
+  font-family: 'Graphik-fonts'; 
+  src: url('../../fonts/Graphik-Medium.ttf') format('truetype'),
+     url('../../fonts/Graphik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* =========================
-   BASE STYLES
+   ------------BASE STYLES------------------
    ========================= */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url(asset\src\img\plane-air.jpg);
-  color: #333;
-  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   overflow-x: hidden;
 }
 
 .navbar {
   display: flex;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #000000;
   height: 4rem;
   border-bottom-left-radius:15px ;
   border-bottom-right-radius:15px ;
-  font-family: "Poppins", sans-serif;
 }
 
 .navbar a {
@@ -56,15 +58,12 @@ body {
 }
 
 .navbar-brand img {
-  max-height: 40px;
+  margin-left: -25px;
+  max-height: 41px;
   width: auto;
   display: inline-block;
 }
 
-
-/* =========================
-   ABOUT US HERO SECTION (Top Border Radius Only)
-   ========================= */
 #hero {
   border-top-left-radius: 32px !important;
   border-top-right-radius: 32px !important;
@@ -72,7 +71,7 @@ body {
   border-bottom-right-radius: 0 !important;
   overflow: hidden;
   width: 99vw;
-  background-color: rgb(255, 255, 255);
+  background-color: #f2f3fa;
   margin-top: 0;
   overflow-wrap: inherit;
 }
@@ -98,7 +97,6 @@ body {
   color: black;
 }
 
-/* Style the active link (or home/logo) */
 .active {
   background-color: #04AA6D;
   color: white;
@@ -119,12 +117,10 @@ body {
   z-index: 999;
 }
 
-/* Show when active */
 .nav-menu.active {
   display: flex;
 }
 
-/* Show hamburger only on mobile */
 .hamburger-toggle {
   display: none;
   flex-direction: column;
@@ -167,12 +163,15 @@ body {
   font-size: 2.8rem;
   font-weight: 700;
   color: #212529;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
 }
 
 .hero p {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
+  font-family: "poppins-regular";
 }
 
 .hero .btn {
@@ -436,4 +435,8 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+}
+
+.footer {
+  background-color: #0c86ff !important;
 }
